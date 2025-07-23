@@ -11,140 +11,8 @@
       rel="stylesheet"
     />
 
-    <style>
-      body {
-        background: linear-gradient(135deg, #f8fafc, #e0e7ff);
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        min-height: 100vh;
-        overflow-x: hidden;
-      }
-
-      .container {
-        max-width: 650px;
-        margin: 3rem auto;
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-        padding: 2rem 2.5rem;
-        position: relative;
-        z-index: 1;
-      }
-
-      h1 {
-        font-weight: 700;
-        color: #1e293b;
-        margin-bottom: 2rem;
-        text-align: center;
-        letter-spacing: 1.1px;
-      }
-
-      /* Tablero como tabla */
-      table.tablero {
-        border-collapse: collapse;
-        width: 200px;
-        margin: 0 auto 2rem auto;
-        text-align: center;
-        font-weight: bold;
-        font-size: 24px;
-        user-select: none;
-      }
-
-      table.tablero td {
-        width: 60px;
-        height: 60px;
-        border: 2px solid #cbd5e1;
-        vertical-align: middle;
-        font-weight: bold;
-        font-size: 24px;
-        color: #334155;
-      }
-
-      table.tablero td.x {
-        color: #e74c3c;
-      }
-
-      table.tablero td.o {
-        color: #2980b9;
-      }
-
-      /* Resaltar la celda de la última jugada */
-      table.tablero td.marcada {
-        background-color: #fff8dc;
-        border: 3px solid #f1c40f;
-      }
-
-      .btn-back {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        background: #64748b;
-        color: white;
-        font-weight: 600;
-        border-radius: 10px;
-        padding: 0.6rem 1.1rem;
-        box-shadow: 0 6px 10px rgb(0 0 0 / 0.15);
-        border: none;
-        cursor: pointer;
-        z-index: 1000;
-      }
-
-      .btn-history {
-        display: block;
-        width: 100%;
-        margin-top: 1.5rem;
-        font-weight: 600;
-        border-radius: 12px;
-        padding: 0.8rem 1.2rem;
-        background-color: #2563eb;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-      }
-
-      .rubrica-btn {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-      }
-
-      /* Sidebar de rúbrica */
-      .rubrica-panel {
-        position: fixed;
-        top: 0;
-        right: -500px;
-        width: 480px;
-        height: 100%;
-        background: #ffffff;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-        padding: 2rem;
-        overflow-y: auto;
-        transition: right 0.4s ease;
-        z-index: 1050;
-      }
-
-      .rubrica-panel.open {
-        right: 0;
-      }
-
-      .rubrica-panel h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.2rem;
-        font-weight: 700;
-        text-align: center;
-      }
-
-      .rubrica-panel table {
-        font-size: 0.85rem;
-      }
-
-      .rubrica-panel .btn-close {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        font-size: 1.2rem;
-      }
-    </style>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/static/css/evaluar.css" />
   </head>
   <body>
     <!-- Botones fijos -->
@@ -228,38 +96,7 @@
         Última jugada.
       </p>
 
-      <!-- TABLERO -->
-      <!-- <table class="tablero" role="grid">
-        {% for fila in jugada.tablero %}
-          {% set fila_idx = loop.index0 %}
-          <tr>
-            {% for celda in fila %}
-              {% set col_idx = loop.index0 %}
-              {% set marcado = (jugada.movimiento[1]|int - 1 == fila_idx and jugada.movimiento[2]|int - 1 == col_idx) %}
-              <td class="
-                {% if celda == 'x' %}x{% elif celda == 'o' %}o{% endif %}
-                {{ ' marcada' if marcado else '' }}">
-                {{ celda|upper if celda != 'b' else '' }}
-              </td>
-            {% endfor %}
-          </tr>
-        {% endfor %}
-      </table> -->
-
-      <!-- TABLERO -->
       <div id="tablero-dinamico" class="mt-3 mb-3"></div>
-
-      <!-- INFO DE LA JUGADA -->
-      <!-- <div class="text-center mb-4 mt-4" style="font-size: 1.2rem">
-        <p><strong>Jugador:</strong> {{ jugada.jugador | upper }}</p>
-        <p><strong>Modelo:</strong> {{ jugada.modelo }}</p>
-        <p>
-          <strong>Movimiento:</strong>
-          {% if jugada.movimiento[0] == 'mark' %} Marcar fila {{
-          jugada.movimiento[1] }}, columna {{ jugada.movimiento[2] }} {% else %}
-          {{ jugada.movimiento }} {% endif %}
-        </p>
-      </div> -->
 
       <div
         id="info-jugada"
@@ -270,18 +107,7 @@
         INFO DE LA JUGADA: Cargando...
       </div>
 
-      <!-- INFO DE LA JUGADA -->
-      <!-- <div
-        id="info-jugada"
-        class="text-center mb-4 mt-4"
-        style="font-size: 1.2rem"
-      >
-        <p><em>Cargando información de la jugada...</em></p>
-      </div> -->
-
-      <!-- FORMULARIOS GUARDAR / SIGUIENTE LADO A LADO -->
       <div class="d-flex gap-3 flex-wrap">
-        <!-- Guardar evaluación -->
         <form
           action="/guardar_evaluacion"
           method="POST"
@@ -300,16 +126,17 @@
 
           <h4 class="mb-3">Evaluación por Rúbrica</h4>
 
-          {% set dimensiones = [ ('Comprensión de Reglas', '¿El movimiento
-          respeta las reglas básicas del juego?'), ('Validez y Legalidad', '¿Es
-          un movimiento permitido y legal?'), ('Razonamiento Estratégico', '¿Se
-          nota una intención estratégica en el movimiento?'), ('Factualidad',
-          '¿La justificación se basa en el estado real del tablero?'),
-          ('Coherencia Explicativa', '¿La explicación tiene sentido con el
-          movimiento realizado?'), ('Claridad Lingüística', '¿Está bien
-          expresado, sin errores graves?'), ('Adaptabilidad', '¿Se adapta al
-          contexto actual del juego?') ] %} {% for nombre, descripcion in
-          dimensiones %}
+          {% set dimensiones = [
+            ('Comprensión de Reglas', '¿El movimiento respeta las reglas básicas del juego?'),
+            ('Validez y Legalidad', '¿Es un movimiento permitido y legal?'),
+            ('Razonamiento Estratégico', '¿Se nota una intención estratégica en el movimiento?'),
+            ('Factualidad', '¿La justificación se basa en el estado real del tablero?'),
+            ('Coherencia Explicativa', '¿La explicación tiene sentido con el movimiento realizado?'),
+            ('Claridad Lingüística', '¿Está bien expresado, sin errores graves?'),
+            ('Adaptabilidad', '¿Se adapta al contexto actual del juego?')
+          ] %}
+
+          {% for nombre, descripcion in dimensiones %}
           <div class="mb-4">
             <label class="form-label fw-bold">{{ nombre }}</label>
             <p class="text-muted">{{ descripcion }}</p>
@@ -362,24 +189,11 @@
             ✅ Guardar Evaluación
           </button>
         </form>
-
-        <!-- Siguiente jugada (sin guardar) -->
-        <!-- <form
-          action="/siguiente_jugada"
-          method="POST"
-          class="flex-grow-1 d-flex align-items-end"
-        >
-          <input type="hidden" name="match_id" value="{{ jugada.match_id }}">
-          <input type="hidden" name="movimiento" value="{{ jugada.movimiento | tojson | safe }}">
-          <button type="submit" class="btn btn-secondary btn-lg w-100">▶ Siguiente</button>
-        </form> -->
       </div>
-      <!-- /d-flex -->
 
-      <!-- Historial -->
-      <a href="/evaluaciones_historial" class="btn-history mt-4" style="font-size: 1.2rem;"
-        >📜 Ver historial de evaluaciones</a
-      >
+      <a href="/evaluaciones_historial" class="btn-history mt-4" style="font-size: 1.2rem;">
+        📜 Ver historial de evaluaciones
+      </a>
 
       {% else %}
       <p class="text-center fs-5 mt-5">
@@ -387,112 +201,8 @@
       </p>
       {% endif %}
     </div>
-    <!-- /container -->
 
-    <!-- Contenedor de la jugada -->
-    <!-- <div
-      id="info-jugada"
-      class="text-center mb-4 mt-4"
-      style="font-size: 1.2rem"
-    >
-      <p><em>Cargando información de la jugada...</em></p>
-    </div> -->
-
-    <!-- Contenedor del tablero -->
-    <div id="tablero-dinamico" class="mt-3 mb-3"></div>
-
-    <script>
-      function toggleRubrica() {
-        const panel = document.getElementById("rubricaPanel");
-        panel.classList.toggle("open");
-      }
-
-      function validarFormulario() {
-        const form = document.querySelector(
-          'form[action="/guardar_evaluacion"]'
-        );
-        if (!form) return true;
-
-        const dimensiones = [
-          "Comprensión de Reglas",
-          "Validez y Legalidad",
-          "Razonamiento Estratégico",
-          "Factualidad",
-          "Coherencia Explicativa",
-          "Claridad Lingüística",
-          "Adaptabilidad",
-        ];
-
-        for (const dim of dimensiones) {
-          const radios = document.getElementsByName(`rubrica[${dim}]`);
-          if (![...radios].some((radio) => radio.checked)) {
-            alert(`Por favor, evalúa la dimensión: "${dim}"`);
-            return false;
-          }
-        }
-
-        const razonEl = document.getElementById("razon");
-        if (razonEl && razonEl.value.trim().length < 3) {
-          alert("Por favor, escribe una explicación más completa.");
-          return false;
-        }
-
-        return true;
-      }
-
-      function renderTablero(tablero) {
-        const contenedor = document.getElementById("tablero-dinamico");
-        contenedor.innerHTML = "";
-        const table = document.createElement("table");
-        table.className = "tablero";
-        for (let i = 0; i < 3; i++) {
-          const row = document.createElement("tr");
-          for (let j = 0; j < 3; j++) {
-            const cell = document.createElement("td");
-            const value = tablero[i][j];
-            if (value !== "b") {
-              cell.innerText = value.toUpperCase();
-              cell.classList.add(value);
-            }
-            row.appendChild(cell);
-          }
-          table.appendChild(row);
-        }
-        contenedor.appendChild(table);
-      }
-
-      function cargarInfoJugada() {
-        fetch("/info_jugada_sesion")
-          .then((res) => res.json())
-          .then((data) => {
-            const contenedor = document.getElementById("info-jugada");
-
-            if (data.error) {
-              contenedor.innerHTML = "<p>No hay jugadas aún.</p>";
-            } else {
-              contenedor.innerHTML = `
-          <p><strong>Jugador:</strong> ${data.jugador}</p>
-          <p><strong>Modelo:</strong> ${data.modelo}</p>
-          <p><strong>Movimiento:</strong> ${data.movimiento}</p>
-        `;
-            }
-          })
-          .catch((err) => {
-            console.error("Error al cargar info de la jugada:", err);
-            document.getElementById("info-jugada").innerHTML =
-              "<p>Error al cargar info de la jugada.</p>";
-          });
-      }
-
-      fetch("/estado")
-        .then((res) => res.json())
-        .then((data) => {
-          renderTablero(data.tablero);
-          cargarInfoJugada();
-        });
-    </script>
-
-    <!-- Bootstrap bundle -->
+    <script src="/static/js/evaluar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
