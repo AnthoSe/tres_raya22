@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Historial de Evaluaciones - Tres en Raya IA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+      padding-top: 3rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #1e293b;
+    }
+
+    .btn-back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #64748b;
+      color: white;
+      font-weight: 600;
+      border-radius: 10px;
+      padding: 0.6rem 1.1rem;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+      z-index: 1000;
+    }
+
+    .btn-back:hover {
+      background: #475569;
+    }
+
+    .badge-eval {
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.4em 0.7em;
+      border-radius: 12px;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .badge-Buena { background-color: #2ecc71; color: white; }
+    .badge-Mala { background-color: #e74c3c; color: white; }
+    .badge-Creativa { background-color: #f39c12; color: white; }
+    .badge-Pudo { background-color: #3498db; color: white; }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: #f8fafc;
+      padding: 0.8rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin: 0;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    .tablero-mini {
+      font-family: monospace;
+      display: inline-block;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 6px 10px;
+      margin-top: 0.5rem;
+      max-width: 150px;
+      overflow-x: auto;
+    }
+
+    .tablero-mini div {
+      display: flex;
+      justify-content: center;
+    }
+
+    .tablero-mini span {
+      width: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .razon-tablero {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    #rubricaPanel {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 400px;
+      height: 100%;
+      background-color: #ffffff;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.15);
+      overflow-y: auto;
+      transition: right 0.4s ease-in-out;
+      padding: 2rem;
+      z-index: 1050;
+    }
+
+    #rubricaPanel.active {
+      right: 0;
+    }
+
+    .rubrica-entry {
+      margin-bottom: 1.5rem;
+    }
+
+    .rubrica-entry h5 {
+      font-weight: bold;
+      color: #1f2937;
+    }
+
+    .rubrica-entry p {
+      margin: 0.2rem 0;
+      font-size: 0.9rem;
+    }
+
+    .rubrica-toggle-btn {
+      float: right;
+      margin-bottom: 1rem;
+    }
+
+    /* Tabla responsiva con scroll horizontal */
+    .table-responsive {
+      overflow-x: auto;
+      max-width: 100%;
+    }
+    table.table {
+      min-width: 900px;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn-back" onclick="window.location.href='/evaluar'">← Regresar</button>
+
+  <div class="container">
+    <h1>Historial de Evaluaciones</h1>
+    <button class="btn btn-outline-secondary rubrica-toggle-btn" onclick="toggleRubrica()">Ver Rúbrica</button>
+    <a href="/evaluar" class="btn btn-primary mb-3">Volver a evaluar</a>
+
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle table-striped">
+        <thead class="table-dark text-center">
+          <tr>
+            <th>Fecha</th>
+            <th>Jugador</th>
+            <th>Modelo</th>
+            <th>Movimiento</th>
+            <th>Evaluación</th>
+            <th>Razón y Tablero</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for ev in evaluaciones %}
+          <tr>
+            <td>{{ ev.timestamp }}</td>
+            <td>{{ ev.jugador | upper }}</td>
+            <td>{{ ev.modelo }}</td>
+            <td>{{ ev.movimiento_legible }}</td>
+            <td class="text-center">
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <span class="badge badge-eval
+                  {% if ev.evaluacion == 'Buena' %}badge-Buena
+                  {% elif ev.evaluacion == 'Mala' %}badge-Mala
+                  {% elif ev.evaluacion == 'Creativa' %}badge-Creativa
+                  {% else %}badge-Pudo{% endif %}">
+                  {{ ev.evaluacion }}
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class="razon-tablero">
+                <pre>{{ ev.razon_texto or "Sin explicación" }}</pre>
+                {% if ev.tablero is string %}
+                <pre>{{ ev.tablero }}</pre>
+                {% else %}
+                <div class="tablero-mini">
+                  {% for fila in ev.tablero %}
+                  <div>
+                    {% for celda in fila %}
+                    <span>{{ celda if celda != 'b' else '-' }}</span>
+                    {% endfor %}
+                  </div>
+                  {% endfor %}
+                </div>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+          {% else %}
+          <tr>
+            <td colspan="6" class="text-center fst-italic">No hay evaluaciones aún.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Panel lateral de rúbrica -->
+  <div id="rubricaPanel" aria-hidden="true" role="region" aria-label="Rúbrica de evaluación">
+    <h3>Rúbrica de Evaluación</h3>
+    <div id="rubricaContent">
+      {% for r in [
+        ("Comprensión de Reglas", "Viola reglas básicas: casilla ocupada o fuera del tablero.", "Cumple reglas básicas, pero omite situaciones menos evidentes.", "Siempre movimientos legales, respeta todas las reglas del turno."),
+        ("Validez y Legalidad", "Movimiento inválido o ilegal.", "Movimiento válido sin análisis profundo.", "Válido y elegido tras un análisis completo."),
+        ("Razonamiento Estratégico", "Acción sin lógica.", "Intención simple (bloquear/avanzar), sin anticipación.", "Justificación clara, anticipa jugadas."),
+        ("Factualidad", "Incorrecta o no relacionada con tablero.", "Generalmente correcta con imprecisiones.", "Precisa y basada en hechos concretos."),
+        ("Coherencia Explicativa", "Confusa o contradictoria.", "Clara pero superficial.", "Lógica, completa y coherente."),
+        ("Claridad Lingüística", "Lenguaje poco claro.", "Claro con errores menores.", "Preciso, correcto y comprensible."),
+        ("Adaptabilidad", "Ignora cambios previos.", "Se adapta de forma básica o tardía.", "Rápida adaptación y ajuste efectivo.")
+      ] %}
+      <div class="rubrica-entry">
+        <h5>{{ r[0] }}</h5>
+        <p><strong>1:</strong> {{ r[1] }}</p>
+        <p><strong>2:</strong> {{ r[2] }}</p>
+        <p><strong>3:</strong> {{ r[3] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script>
+    function toggleRubrica() {
+      const panel = document.getElementById('rubricaPanel');
+      const expanded = panel.classList.toggle('active');
+      panel.setAttribute('aria-hidden', !expanded);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
