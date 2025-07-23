@@ -15,8 +15,8 @@ def home():
     return "Hola desde Render"
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Render asigna el puerto aquí
-    app.run(host='0.0.0.0', port=port)       # Escuchar en todas las interfaces
+    port = int(os.environ.get("PORT", 5000))  # Puerto asignado por Render
+    app.run(host='0.0.0.0', port=port, debug=False)
 
 # Dimensiones de la rúbrica (exactamente como en JS)
 DIMENSIONES = [
