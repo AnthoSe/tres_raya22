@@ -34,6 +34,34 @@ function renderHistorial() {
     .join("<br>");
 }
 
+function guardarEstado(tableroActual) {
+  const estado = {
+    tablero: tableroActual,
+    historial,
+    jugando,
+    modoAuto
+  };
+  sessionStorage.setItem("estado_tres_en_raya", JSON.stringify(estado));
+}
+
+function cargarEstado() {
+  const guardado = sessionStorage.getItem("estado_tres_en_raya");
+  if (!guardado) return false;
+
+  try {
+    const { tablero, historial: hist, jugando: jugandoGuardado, modoAuto: auto } = JSON.parse(guardado);
+    historial = hist;
+    jugando = jugandoGuardado;
+    modoAuto = auto;
+    renderTablero(tablero);
+    renderHistorial();
+    return true;
+  } catch (e) {
+    console.error("No se pudo restaurar el estado guardado:", e);
+    return false;
+  }
+}
+
 function jugarTurno() {
   if (!jugando) return;
 
@@ -65,6 +93,8 @@ function jugarTurno() {
         jugando = false;
       }
 
+      guardarEstado(data.tablero);
+
       if (modoAuto && jugando) {
         setTimeout(jugarTurno, 150);
       }
@@ -92,6 +122,8 @@ function siguientePartida() {
       ocultarError();
       document.getElementById("razon").innerText = "";
       document.getElementById("historial").innerText = "";
+
+      sessionStorage.removeItem("estado_tres_en_raya");
 
       fetch("/estado")
         .then((res) => res.json())
@@ -124,6 +156,8 @@ function reiniciar() {
       document.getElementById("historial").innerText = "";
       ocultarError();
 
+      sessionStorage.removeItem("estado_tres_en_raya");
+
       fetch("/estado")
         .then((res) => res.json())
         .then((data) => renderTablero(data.tablero));
@@ -134,5 +168,8 @@ function reiniciar() {
     });
 }
 
-// Iniciar con tablero limpio
-reiniciar();
+// Iniciar con tablero restaurado si existe
+window.addEventListener("DOMContentLoaded", () => {
+  const cargado = cargarEstado();
+  if (!cargado) reiniciar();
+});

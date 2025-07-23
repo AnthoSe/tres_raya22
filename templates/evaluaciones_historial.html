@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <title>Historial de Evaluaciones - Tres en Raya IA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Carga CSS externo -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/historial.css') }}">
+  <link rel="stylesheet" href="/static/css/historial.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
   <button class="btn-back" onclick="window.location.href='/evaluar'">← Regresar</button>
 
   <div class="container">
     <h1>Historial de Evaluaciones</h1>
+
     <button class="btn btn-outline-secondary rubrica-toggle-btn" onclick="toggleRubrica()">Ver Rúbrica</button>
     <a href="/evaluar" class="btn btn-primary mb-3">Volver a evaluar</a>
 
@@ -42,14 +41,14 @@
             <td class="text-center">
               <div style="display: flex; flex-direction: column; align-items: center;">
                 <span class="badge badge-eval
-                  {% if ev.evaluacion == 'Buena' %}badge-Buena
-                  {% elif ev.evaluacion == 'Mala' %}badge-Mala
-                  {% elif ev.evaluacion == 'Creativa' %}badge-Creativa
-                  {% else %}badge-Pudo{% endif %}" title="{% if ev.evaluacion == 'Buena' %}Buena: movimiento estratégico y correcto
-                         {% elif ev.evaluacion == 'Mala' %}Mala: movimiento erróneo o sin sentido
-                         {% elif ev.evaluacion == 'Creativa' %}Creativa: movimiento original o inesperado
-                         {% else %}Puede mejorar: movimiento válido pero con errores
-                         {% endif %}">
+                    {% if ev.evaluacion == 'Buena' %}badge-Buena
+                    {% elif ev.evaluacion == 'Mala' %}badge-Mala
+                    {% elif ev.evaluacion == 'Creativa' %}badge-Creativa
+                    {% else %}badge-Pudo{% endif %}" title="{% if ev.evaluacion == 'Buena' %}Buena: movimiento estratégico y correcto
+                          {% elif ev.evaluacion == 'Mala' %}Mala: movimiento erróneo o sin sentido
+                          {% elif ev.evaluacion == 'Creativa' %}Creativa: movimiento original o inesperado
+                          {% else %}Puede mejorar: movimiento válido pero con errores
+                          {% endif %}">
                   {{ ev.evaluacion }}
                 </span>
               </div>
@@ -81,6 +80,12 @@
         </tbody>
       </table>
     </div>
+
+    <!-- 🔽 Radar abajo del historial -->
+    <div id="radarContainer" aria-label="Gráfico radar resumen de evaluaciones">
+      <h2>Resumen Promedio por Dimensión</h2>
+      <canvas id="graficoRadar" aria-label="Gráfico radar evaluaciones" role="img"></canvas>
+    </div>
   </div>
 
   <!-- Panel lateral de rúbrica -->
@@ -88,22 +93,12 @@
     <h3>Rúbrica de Evaluación</h3>
     <div id="rubricaContent">
       {% for r in [
-      ("Comprensión de Reglas", "Viola reglas básicas: casilla ocupada o fuera del tablero.", "Cumple reglas básicas,
-      pero omite situaciones menos evidentes.", "Siempre movimientos legales, respeta todas las reglas del turno."),
-
-      ("Validez y Legalidad", "Movimiento inválido o ilegal.", "Movimiento válido sin análisis profundo.", "Válido y
-      elegido tras un análisis completo."),
-
-      ("Razonamiento Estratégico", "Acción sin lógica.", "Intención simple (bloquear/avanzar), sin anticipación.",
-      "Justificación clara, anticipa jugadas."),
-
-      ("Factualidad", "Incorrecta o no relacionada con tablero.", "Generalmente correcta con imprecisiones.", "Precisa y
-      basada en hechos concretos."),
-
+      ("Comprensión de Reglas", "Viola reglas básicas: casilla ocupada o fuera del tablero.", "Cumple reglas básicas, pero omite situaciones menos evidentes.", "Siempre movimientos legales, respeta todas las reglas del turno."),
+      ("Validez y Legalidad", "Movimiento inválido o ilegal.", "Movimiento válido sin análisis profundo.", "Válido y elegido tras un análisis completo."),
+      ("Razonamiento Estratégico", "Acción sin lógica.", "Intención simple (bloquear/avanzar), sin anticipación.", "Justificación clara, anticipa jugadas."),
+      ("Factualidad", "Incorrecta o no relacionada con tablero.", "Generalmente correcta con imprecisiones.", "Precisa y basada en hechos concretos."),
       ("Coherencia Explicativa", "Confusa o contradictoria.", "Clara pero superficial.", "Lógica, completa y coherente."),
-
       ("Claridad Lingüística", "Lenguaje poco claro.", "Claro con errores menores.", "Preciso, correcto y comprensible."),
-
       ("Adaptabilidad", "Ignora cambios previos.", "Se adapta de forma básica o tardía.", "Rápida adaptación y ajuste efectivo.")
       ] %}
       <div class="rubrica-entry">
@@ -116,8 +111,14 @@
     </div>
   </div>
 
-  <script src="{{ url_for('static', filename='js/historial.js') }}"></script>
+  <!-- Variables desde Flask -->
+  <script>
+    window.dimensiones = {{ dimensiones | tojson }};
+    window.promedios = {{ promedios | tojson }};
+  </script>
+
+  <!-- Scripts -->
+  <script src="/static/js/historial.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

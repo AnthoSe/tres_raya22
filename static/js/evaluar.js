@@ -97,6 +97,18 @@ function cargarInfoJugada() {
             }
           </p>
         `;
+
+        // ✅ Guardar info en sessionStorage para restaurar al volver al index
+        const estadoGuardado = sessionStorage.getItem("estado_tres_en_raya");
+        if (estadoGuardado) {
+          try {
+            const estado = JSON.parse(estadoGuardado);
+            estado.tablero = data.tablero;  // opcional si se entrega
+            sessionStorage.setItem("estado_tres_en_raya", JSON.stringify(estado));
+          } catch (e) {
+            console.warn("No se pudo actualizar sessionStorage desde /evaluar");
+          }
+        }
       }
     })
     .catch((err) => {
@@ -113,6 +125,19 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.json())
     .then((data) => {
       renderTablero(data.tablero, data.movimiento);
+
+      // ✅ Guardar tablero para restaurar luego en el index
+      const estadoGuardado = sessionStorage.getItem("estado_tres_en_raya");
+      if (estadoGuardado) {
+        try {
+          const estado = JSON.parse(estadoGuardado);
+          estado.tablero = data.tablero;
+          sessionStorage.setItem("estado_tres_en_raya", JSON.stringify(estado));
+        } catch (e) {
+          console.warn("No se pudo guardar el tablero en sessionStorage");
+        }
+      }
+
       cargarInfoJugada();
     })
     .catch((err) => {

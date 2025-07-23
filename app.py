@@ -7,8 +7,20 @@ import json
 from datetime import datetime
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 from juego_ia import buscar_jugada, inicializar_tablero, revisar_ganador, reiniciar_indice, indice_actual
+from db_handler import create_connection
 
 app = Flask(__name__)
+
+# Dimensiones de la rúbrica (exactamente como en JS)
+DIMENSIONES = [
+    "Comprensión de Reglas",
+    "Validez y Legalidad",
+    "Razonamiento Estratégico",
+    "Factualidad",
+    "Coherencia Explicativa",
+    "Claridad Lingüística",
+    "Adaptabilidad"
+]
 
 # Clave secreta necesaria para usar sesiones
 app.secret_key = os.urandom(24)
@@ -262,7 +274,13 @@ def guardar_evaluaciones_completas(match_id, jugadas):
         for ev in evaluaciones:
             f.write(json.dumps(ev, ensure_ascii=False) + "\n")
 
-    
+def obtener_jugadas():
+    conn = create_connection()
+    c = conn.cursor()
+    c.execute('SELECT * FROM jugadas')
+    jugadas = c.fetchall()
+    conn.close()
+    return jugadas    
 ### RUTAS PARA EVALUACIÓN ###
 
 @app.route("/evaluar", methods=["GET", "POST"])
@@ -318,6 +336,26 @@ def evaluar():
 
 @app.route("/evaluaciones_historial")
 def evaluaciones_historial():
+    dimensiones = [
+        "Comprensión de Reglas",
+        "Validez y Legalidad",
+        "Razonamiento Estratégico",
+        "Factualidad",
+        "Coherencia Explicativa",
+        "Claridad Lingüística",
+        "Adaptabilidad",
+    ]
+
+    # Por ejemplo, los puntajes promedio por dimensión (de 0 a 3)
+    promedios = {
+        "Comprensión de Reglas": 2.5,
+        "Validez y Legalidad": 2.2,
+        "Razonamiento Estratégico": 1.8,
+        "Factualidad": 2.7,
+        "Coherencia Explicativa": 2.3,
+        "Claridad Lingüística": 2.9,
+        "Adaptabilidad": 2.0,
+    }
     evaluaciones = cargar_evaluaciones_desde_archivo()
 
     for ev in evaluaciones:
@@ -347,7 +385,7 @@ def evaluaciones_historial():
         if isinstance(ev["tablero"], list):
             ev["tablero"] = ev["tablero"]
 
-    return render_template("evaluaciones_historial.html", evaluaciones=evaluaciones)
+    return render_template("evaluaciones_historial.html", evaluaciones=evaluaciones, dimensiones=dimensiones, promedios=promedios)
 
 
 @app.route("/rubrica")
@@ -452,6 +490,53 @@ def guardar_evaluacion():
 def siguiente_jugada():
     # Simplemente redirige a evaluar para mostrar la próxima jugada no evaluada
     return redirect(url_for("evaluar"))
+
+
+
+# Graficos 
+def cargar_evaluaciones():
+    # Aquí cargas tus evaluaciones desde el archivo JSON
+    # Por ejemplo:
+    try:
+        with open("evaluaciones.json", "r", encoding="utf-8") as f:
+            evaluaciones = json.load(f)
+        return evaluaciones
+    except Exception:
+        return []
+
+def calcular_promedios(evaluaciones):
+    # Inicializa dict con sumas y conteos
+    suma_por_dim = {dim: 0 for dim in DIMENSIONES}
+    conteo_por_dim = {dim: 0 for dim in DIMENSIONES}
+
+    for ev in evaluaciones:
+        # ev['rubrica'] es el dict con las dimensiones y sus valores
+        rubrica = ev.get('rubrica', {})
+        for dim in DIMENSIONES:
+            valor = rubrica.get(dim)
+            if valor is not None:
+                try:
+                    v = int(valor)
+                    suma_por_dim[dim] += v
+                    conteo_por_dim[dim] += 1
+                except ValueError:
+                    pass
+
+    promedios = {}
+    for dim in DIMENSIONES:
+        if conteo_por_dim[dim] > 0:
+            promedios[dim] = round(suma_por_dim[dim] / conteo_por_dim[dim], 2)
+        else:
+            promedios[dim] = 0
+
+    return promedios
+
+@app.route("/grafico_radar")
+def grafico_radar():
+    evaluaciones = cargar_evaluaciones()
+    promedios = calcular_promedios(evaluaciones)
+    # Enviamos dimensiones y valores promedio al template
+    return render_template("grafico_radar.html", dimensiones=DIMENSIONES, promedios=promedios)
 
 
 if __name__ == "__main__":
