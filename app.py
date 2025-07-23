@@ -10,6 +10,13 @@ from juego_ia import buscar_jugada, inicializar_tablero, revisar_ganador, reinic
 from db_handler import create_connection
 
 app = Flask(__name__)
+@app.route('/')
+def home():
+    return "Hola desde Render"
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))  # Render asigna el puerto aquí
+    app.run(host='0.0.0.0', port=port)       # Escuchar en todas las interfaces
 
 # Dimensiones de la rúbrica (exactamente como en JS)
 DIMENSIONES = [
