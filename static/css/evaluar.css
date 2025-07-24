@@ -24,7 +24,6 @@ h1 {
   letter-spacing: 1.1px;
 }
 
-/* Tablero como tabla */
 table.tablero {
   border-collapse: collapse;
   width: 200px;
@@ -53,7 +52,6 @@ table.tablero td.o {
   color: #2980b9;
 }
 
-/* Resaltar la celda de la última jugada */
 table.tablero td.marcada {
   background-color: #fff8dc;
   border: 3px solid #f1c40f;
@@ -94,7 +92,6 @@ table.tablero td.marcada {
   z-index: 1000;
 }
 
-/* Sidebar de rúbrica */
 .rubrica-panel {
   position: fixed;
   top: 0;

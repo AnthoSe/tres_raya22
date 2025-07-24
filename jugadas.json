@@ -10296,42 +10296,42 @@
     }
   },
   {
-    "jugador": "x",
+    "jugador": "o",
     "movimiento": [
       "mark",
-      "1",
+      "3",
       "1"
     ],
-    "razon": "['[\"mark\", \"1\", \"1\"] I am marking cell (1,1) to start the game.']",
-    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "razon": "rpeuba 202",
+    "modelo": "o3-mini",
     "ganador": null,
     "tablero": [
       [
         "x",
-        "b",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
         "b"
       ],
       [
-        "b",
-        "b",
-        "b"
-      ],
-      [
-        "b",
+        "o",
         "b",
         "b"
       ]
     ],
-    "evaluada": false,
+    "evaluada": true,
     "match_id": 1,
     "evaluacion": {
-      "Comprensi\u00f3n de Reglas": 2,
-      "Validez y Legalidad": 2,
-      "Razonamiento Estrat\u00e9gico": 2,
-      "Factualidad": 2,
-      "Coherencia Explicativa": 2,
-      "Claridad Ling\u00fc\u00edstica": 3,
-      "Adaptabilidad": 2
+      "[Comprensi\u00f3n de Reglas": 1,
+      "[Validez y Legalidad": 1,
+      "[Razonamiento Estrat\u00e9gico": 1,
+      "[Factualidad": 1,
+      "[Coherencia Explicativa": 1,
+      "[Claridad Ling\u00fc\u00edstica": 1,
+      "[Adaptabilidad": 1
     }
   },
   {
@@ -10569,81 +10569,81 @@
     }
   },
   {
-    "jugador": "x",
+    "jugador": "o",
     "movimiento": [
       "mark",
-      "2",
-      "2"
+      "3",
+      "1"
     ],
-    "razon": "['[\"mark\", \"2\", \"2\"] I chose to mark the center cell because it is strategically advantageous in Tic-Tac-Toe, as it participates in the most potential winning lines (one row, one column, and two diagonals). This gives player \\'x\\' the best chance to develop winning lines.']",
-    "modelo": "google/gemini-2.0-pro-exp-02-05:free",
+    "razon": "salsalslalals",
+    "modelo": "o3-mini",
     "ganador": null,
     "tablero": [
       [
-        "b",
-        "b",
-        "b"
-      ],
-      [
-        "b",
         "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
         "b"
       ],
       [
-        "b",
+        "o",
         "b",
         "b"
       ]
     ],
-    "evaluada": false,
+    "evaluada": true,
     "match_id": 1,
     "evaluacion": {
-      "Comprensi\u00f3n de Reglas": 2,
-      "Validez y Legalidad": 2,
-      "Razonamiento Estrat\u00e9gico": 2,
-      "Factualidad": 2,
-      "Coherencia Explicativa": 2,
-      "Claridad Ling\u00fc\u00edstica": 3,
-      "Adaptabilidad": 2
+      "[Comprensi\u00f3n de Reglas": 1,
+      "[Validez y Legalidad": 1,
+      "[Razonamiento Estrat\u00e9gico": 1,
+      "[Factualidad": 1,
+      "[Coherencia Explicativa": 1,
+      "[Claridad Ling\u00fc\u00edstica": 1,
+      "[Adaptabilidad": 1
     }
   },
   {
     "jugador": "x",
     "movimiento": [
       "mark",
-      "2",
-      "2"
+      "1",
+      "3"
     ],
-    "razon": "['```json [\"mark\", \"2\", \"2\"] ``` This is a good opening move in tic-tac-toe, controlling the center of the board.']",
-    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "razon": "prueba12312",
+    "modelo": "google/gemini-exp-1206:free",
     "ganador": null,
     "tablero": [
       [
-        "b",
-        "b",
-        "b"
-      ],
-      [
-        "b",
         "x",
+        "x",
+        "x"
+      ],
+      [
+        "b",
+        "o",
         "b"
       ],
       [
         "b",
         "b",
-        "b"
+        "o"
       ]
     ],
-    "evaluada": false,
+    "evaluada": true,
     "match_id": 1,
     "evaluacion": {
-      "Comprensi\u00f3n de Reglas": 2,
-      "Validez y Legalidad": 2,
-      "Razonamiento Estrat\u00e9gico": 2,
-      "Factualidad": 2,
-      "Coherencia Explicativa": 2,
-      "Claridad Ling\u00fc\u00edstica": 3,
-      "Adaptabilidad": 2
+      "[Comprensi\u00f3n de Reglas": 3,
+      "[Validez y Legalidad": 3,
+      "[Razonamiento Estrat\u00e9gico": 3,
+      "[Factualidad": 3,
+      "[Coherencia Explicativa": 3,
+      "[Claridad Ling\u00fc\u00edstica": 3,
+      "[Adaptabilidad": 3
     }
   },
   {
@@ -10881,43 +10881,44 @@
     }
   },
   {
-    "jugador": "x",
+    "jugador": "o",
     "movimiento": [
       "mark",
-      "2",
-      "2"
+      "3",
+      "1"
     ],
-    "razon": "['[\"mark\", \"2\", \"2\"] This is the first move of the game, and placing \\'x\\' in the center is a good opening strategy in tic-tac-toe.']",
-    "modelo": "google/gemini-2.0-flash-thinking-exp-1219:free",
+    "razon": "asdadasdadsd",
+    "modelo": "o3-mini",
     "ganador": null,
     "tablero": [
       [
-        "b",
-        "b",
-        "b"
-      ],
-      [
-        "b",
         "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
         "b"
       ],
       [
-        "b",
+        "o",
         "b",
         "b"
       ]
     ],
-    "evaluada": false,
+    "evaluada": true,
     "match_id": 1,
     "evaluacion": {
-      "Comprensi\u00f3n de Reglas": 2,
-      "Validez y Legalidad": 2,
-      "Razonamiento Estrat\u00e9gico": 2,
-      "Factualidad": 2,
-      "Coherencia Explicativa": 2,
-      "Claridad Ling\u00fc\u00edstica": 3,
-      "Adaptabilidad": 2
-    }
+      "[Comprensi\u00f3n de Reglas": 3,
+      "[Validez y Legalidad": 3,
+      "[Razonamiento Estrat\u00e9gico": 3,
+      "[Factualidad": 3,
+      "[Coherencia Explicativa": 3,
+      "[Claridad Ling\u00fc\u00edstica": 3,
+      "[Adaptabilidad": 3
+    },
+    "fecha_evaluacion": "2025-07-23 12:06:12"
   },
   {
     "jugador": "o",
@@ -11235,40 +11236,41 @@
     "jugador": "x",
     "movimiento": [
       "mark",
-      "1",
+      "3",
       "1"
     ],
-    "razon": "['Okay, let\\'s start the game. My move is: [\"mark\",\"1\",\"1\"] Reason: As player x, I will mark the cell at (1, 1) to start building a potential diagonal or row.']",
-    "modelo": "google/gemini-2.0-flash-exp:free",
+    "razon": "asdasdsads",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
     "ganador": null,
     "tablero": [
+      [
+        "o",
+        "o",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
       [
         "x",
         "b",
         "b"
-      ],
-      [
-        "b",
-        "b",
-        "b"
-      ],
-      [
-        "b",
-        "b",
-        "b"
       ]
     ],
-    "evaluada": false,
+    "evaluada": true,
     "match_id": 1,
     "evaluacion": {
-      "Comprensi\u00f3n de Reglas": 2,
-      "Validez y Legalidad": 2,
-      "Razonamiento Estrat\u00e9gico": 2,
-      "Factualidad": 2,
-      "Coherencia Explicativa": 2,
-      "Claridad Ling\u00fc\u00edstica": 3,
-      "Adaptabilidad": 2
-    }
+      "[Comprensi\u00f3n de Reglas": 2,
+      "[Validez y Legalidad": 2,
+      "[Razonamiento Estrat\u00e9gico": 2,
+      "[Factualidad": 2,
+      "[Coherencia Explicativa": 2,
+      "[Claridad Ling\u00fc\u00edstica": 2,
+      "[Adaptabilidad": 2
+    },
+    "fecha_evaluacion": "2025-07-23 12:10:09"
   },
   {
     "jugador": "o",
@@ -40900,6 +40902,3711 @@
     ],
     "evaluada": false,
     "match_id": 6,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "[\"['mark', '1', '1'] I am starting by marking the top-left cell.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "[\"['mark', '2', '2'] I marked the center cell because it gives me control over multiple winning lines.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "[\"['mark', '1', '2'] I am marking the cell at (1,2) to try to create a horizontal line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "[\"['mark', '1', '3'] I marked the top-right cell to block your potential horizontal win in the first row.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "1"
+    ],
+    "razon": "[\"['mark', '2', '1'] I am marking the cell at (2,1) to try to complete a vertical line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "[\"['mark', '3', '1'] I marked the bottom-left cell to block your potential vertical win in the first column.\"]",
+    "modelo": "o3-mini",
+    "ganador": "o",
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "o",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 6,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "[\"['mark', '1', '1'] I am starting by marking the top-left cell.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "[\"['mark', '2', '2'] I marked the center cell because it gives me control over multiple winning lines.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "[\"['mark', '1', '2'] I am marking the cell at (1,2) to try to create a horizontal line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "[\"['mark', '1', '3'] I marked the top-right cell to block your potential horizontal win in the first row.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "1"
+    ],
+    "razon": "[\"['mark', '2', '1'] I am marking the cell at (2,1) to try to complete a vertical line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "[\"['mark', '3', '1'] I marked the bottom-left cell to block your potential vertical win in the first column.\"]",
+    "modelo": "o3-mini",
+    "ganador": "o",
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "o",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 6,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "[\"['mark', '1', '1'] I am starting by marking the top-left cell.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "[\"['mark', '2', '2'] I marked the center cell because it gives me control over multiple winning lines.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['[\"mark\", \"2\", \"2\"] This is a good starting move in tic-tac-toe as it controls the center of the board.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "['Okay, let\\'s continue the game. ```json [\"mark\", \"1\", \"1\"] ``` Reason: I\\'m playing as \\'o\\'. I need to make a move that doesn\\'t immediately give \\'x\\' a significant advantage. Placing my mark in the top-left corner is a reasonable opening move to start building a potential diagonal or row.']",
+    "modelo": "google/gemini-2.0-flash-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "['```json [\"mark\", \"1\", \"3\"] ``` Reason: Player \\'o\\' has marked cell (1, 1). As player \\'x\\', placing a mark at (1, 3) is a good strategy as it starts building a potential horizontal line and a diagonal line while also preventing \\'o\\' from potentially building a horizontal line in the first row easily.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "['```json [\"mark\", \"1\", \"2\"] ``` Reason: I\\'m playing as \\'o\\'. Player \\'x\\' has pieces at (2, 2) and (1, 3). If I don\\'t play in (1, 2), then player \\'x\\' will win on their next turn by completing the row at the top. Therefore, I must play at (1, 2) to block them.']",
+    "modelo": "google/gemini-2.0-flash-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "o",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "['```json [\"mark\", \"3\", \"1\"] ``` Reason: Player \\'o\\' has blocked the first row. As player \\'x\\', I see that placing my mark at (3, 1) completes the diagonal from the top right to the bottom left, which leads to winning the game.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "ganador": "x",
+    "tablero": [
+      [
+        "o",
+        "o",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "x",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['[\"mark\", \"2\", \"2\"] This is a strategic move to control the center of the board, which increases the chances of winning.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp-1219:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "['[\"mark\", \"1\", \"1\"] Placing an \"o\" in the corner to create potential winning opportunities and challenge \"x\" for control.']",
+    "modelo": "o1-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['Okay, it\\'s x\\'s turn to make a move. The board is currently empty. I will place x in the center of the board. [\"mark\",\"2\",\"2\"]']",
+    "modelo": "google/gemini-2.0-flash-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "['[\"mark\",\"1\",\"1\"] I chose this move because it\\'s a standard opening in Tic-Tac-Toe, aiming to control a corner and potentially build towards a win.']",
+    "modelo": "google/gemini-exp-1206:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['[\"mark\", \"2\", \"2\"] Taking the center prevents the opponent from creating multiple immediate threats and opens up more potential winning lines for \\'o\\'.']",
+    "modelo": "google/learnlm-1.5-pro-experimental:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "['```json [\"mark\", \"1\", \"1\"] ``` Reason:As the first player, I\\'m marking the top-left corner to start offensively and control the center of the board later. This increases my chances of creating winning combinations.']",
+    "modelo": "google/learnlm-1.5-pro-experimental:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['```json [\"mark\", \"2\", \"2\"] ``` Reason: I am placing my mark in the center. This is a strategically important position as it gives me the most potential lines of victory (one row, one column, and two diagonals). This is a counter-move to try to block the opponent.']",
+    "modelo": "google/gemini-exp-1206:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "['```json [\"mark\", \"1\", \"3\"] ``` Reason:I am attempting to create a diagonal line to win.']",
+    "modelo": "google/learnlm-1.5-pro-experimental:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "x"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "['```json [\"mark\", \"1\", \"2\"] ``` Reason: Player \"x\" is trying to go for the top row. I have to block \\'x\\' to prevent them from winning.']",
+    "modelo": "google/gemini-exp-1206:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "o",
+        "x"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "['```json [\"mark\", \"3\", \"1\"] ``` Reason: I am trying to create a diagonal line from bottom left to top right to win, as well as blocking a potential column win for \\'o\\'.']",
+    "modelo": "google/learnlm-1.5-pro-experimental:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "o",
+        "x"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "x",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "1"
+    ],
+    "razon": "['```json [\"mark\", \"2\", \"1\"] ``` Reason:Player x is trying to win using the first column. I need to block x in order to prevent them from winning.']",
+    "modelo": "google/gemini-exp-1206:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "o",
+        "x"
+      ],
+      [
+        "o",
+        "o",
+        "b"
+      ],
+      [
+        "x",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 6,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "[\"['mark', '1', '1'] I am starting by marking the top-left cell.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "[\"['mark', '2', '2'] I marked the center cell because it gives me control over multiple winning lines.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "[\"['mark', '1', '2'] I am marking the cell at (1,2) to try to create a horizontal line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "[\"['mark', '1', '3'] I marked the top-right cell to block your potential horizontal win in the first row.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "1"
+    ],
+    "razon": "[\"['mark', '2', '1'] I am marking the cell at (2,1) to try to complete a vertical line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "[\"['mark', '3', '1'] I marked the bottom-left cell to block your potential vertical win in the first column.\"]",
+    "modelo": "o3-mini",
+    "ganador": "o",
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "o",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 6,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['[\"mark\", \"2\", \"2\"] This is a good starting move in tic-tac-toe as it controls the center of the board.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "['Okay, let\\'s continue the game. ```json [\"mark\", \"1\", \"1\"] ``` Reason: I\\'m playing as \\'o\\'. I need to make a move that doesn\\'t immediately give \\'x\\' a significant advantage. Placing my mark in the top-left corner is a reasonable opening move to start building a potential diagonal or row.']",
+    "modelo": "google/gemini-2.0-flash-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "['```json [\"mark\", \"1\", \"3\"] ``` Reason: Player \\'o\\' has marked cell (1, 1). As player \\'x\\', placing a mark at (1, 3) is a good strategy as it starts building a potential horizontal line and a diagonal line while also preventing \\'o\\' from potentially building a horizontal line in the first row easily.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "['```json [\"mark\", \"1\", \"2\"] ``` Reason: I\\'m playing as \\'o\\'. Player \\'x\\' has pieces at (2, 2) and (1, 3). If I don\\'t play in (1, 2), then player \\'x\\' will win on their next turn by completing the row at the top. Therefore, I must play at (1, 2) to block them.']",
+    "modelo": "google/gemini-2.0-flash-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "o",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "['```json [\"mark\", \"3\", \"1\"] ``` Reason: Player \\'o\\' has blocked the first row. As player \\'x\\', I see that placing my mark at (3, 1) completes the diagonal from the top right to the bottom left, which leads to winning the game.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "ganador": "x",
+    "tablero": [
+      [
+        "o",
+        "o",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "x",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['[\"mark\", \"2\", \"2\"] This is a strategic move to control the center of the board, which increases the chances of winning.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp-1219:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "['[\"mark\", \"1\", \"1\"] Placing an \"o\" in the corner to create potential winning opportunities and challenge \"x\" for control.']",
+    "modelo": "o1-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "1"
+    ],
+    "razon": "['[\"mark\", \"2\", \"1\"] This move aims to create a horizontal winning line in the second row.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp-1219:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "b"
+      ],
+      [
+        "x",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "3"
+    ],
+    "razon": "['[\"mark\", \"2\", \"3\"] Placing an \"o\" in the second row to block \"x\" from completing a horizontal winning line and prevent a loss.']",
+    "modelo": "o1-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "b"
+      ],
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "['[\"mark\", \"1\", \"2\"] This move aims to create a vertical winning line in the second column by placing an \"x\" in cell (1, 2). It sets up a potential win condition for \"x\" in the next turn if \"o\" doesn\\'t block it, while also exploring other winning possibilities.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp-1219:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "x",
+        "b"
+      ],
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "3",
+      "2"
+    ],
+    "razon": "['[\"mark\", \"3\", \"2\"] Blocking \"x\" from completing a vertical line in the second column to prevent a loss.']",
+    "modelo": "o1-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "x",
+        "b"
+      ],
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 6,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "['[\"mark\", \"3\", \"1\"] This move places an \"x\" at position (3, 1). It does not lead to an immediate win, but it is a valid move to continue the game. There are no immediate winning moves available, so making a move that occupies an empty cell is reasonable to continue to explore winning possibilities in the future.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp-1219:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "x",
+        "b"
+      ],
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 7,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "['[\"mark\", \"1\", \"3\"] Blocking \"x\" from completing the anti-diagonal and preventing a loss.']",
+    "modelo": "o1-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 8,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "3",
+      "3"
+    ],
+    "razon": "['[\"mark\", \"3\", \"3\"] This move is necessary to block \"o\" from winning in the third column. If \"x\" does not mark (3, 3), \"o\" will win in the next turn by completing the third column with \"o\". Preventing the opponent from winning is a priority.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp-1219:free",
+    "ganador": "empate",
+    "tablero": [
+      [
+        "o",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "x"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 9,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['Okay, it\\'s x\\'s turn to make a move. The board is currently empty. I will place x in the center of the board. [\"mark\",\"2\",\"2\"]']",
+    "modelo": "google/gemini-2.0-flash-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "['[\"mark\",\"1\",\"1\"] I chose this move because it\\'s a standard opening in Tic-Tac-Toe, aiming to control a corner and potentially build towards a win.']",
+    "modelo": "google/gemini-exp-1206:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['[\"mark\", \"2\", \"2\"] Taking the center prevents the opponent from creating multiple immediate threats and opens up more potential winning lines for \\'o\\'.']",
+    "modelo": "google/learnlm-1.5-pro-experimental:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "['[\"mark\",\"1\",\"2\"] I chose this move because, prevents player \"o\" to build towards a win in the second column, and potentially build towards a win for me.']",
+    "modelo": "google/gemini-exp-1206:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "3",
+      "3"
+    ],
+    "razon": "['[\"mark\", \"3\", \"3\"] This move creates a potential win condition for \\'o\\' on the diagonal and blocks \\'x\\' from completing a row.']",
+    "modelo": "google/learnlm-1.5-pro-experimental:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "o"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "['[\"mark\",\"1\",\"3\"] I chose this move because I win. I, player \"x\", completed the first row.']",
+    "modelo": "google/gemini-exp-1206:free",
+    "ganador": "x",
+    "tablero": [
+      [
+        "x",
+        "x",
+        "x"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "o"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "[\"['mark', '1', '1'] I am starting by marking the top-left cell.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "[\"['mark', '2', '2'] I marked the center cell because it gives me control over multiple winning lines.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "[\"['mark', '1', '2'] I am marking the cell at (1,2) to try to create a horizontal line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "[\"['mark', '1', '3'] I marked the top-right cell to block your potential horizontal win in the first row.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "1"
+    ],
+    "razon": "[\"['mark', '2', '1'] I am marking the cell at (2,1) to try to complete a vertical line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "[\"['mark', '3', '1'] I marked the bottom-left cell to block your potential vertical win in the first column.\"]",
+    "modelo": "o3-mini",
+    "ganador": "o",
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "o",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 6,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "[\"['mark', '1', '1'] I am starting by marking the top-left cell.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "[\"['mark', '2', '2'] I marked the center cell because it gives me control over multiple winning lines.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "[\"['mark', '1', '2'] I am marking the cell at (1,2) to try to create a horizontal line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "[\"['mark', '1', '3'] I marked the top-right cell to block your potential horizontal win in the first row.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "1"
+    ],
+    "razon": "[\"['mark', '2', '1'] I am marking the cell at (2,1) to try to complete a vertical line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      2,
+      2
+    ],
+    "razon": "No se encontr\u00f3 una jugada v\u00e1lida restante en el dataset",
+    "modelo": "modelo_desconocido",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "[\"['mark', '1', '1'] I am starting by marking the top-left cell.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "[\"['mark', '2', '2'] I marked the center cell because it gives me control over multiple winning lines.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "[\"['mark', '1', '2'] I am marking the cell at (1,2) to try to create a horizontal line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "[\"['mark', '1', '3'] I marked the top-right cell to block your potential horizontal win in the first row.\"]",
+    "modelo": "o3-mini",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "b",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "1"
+    ],
+    "razon": "[\"['mark', '2', '1'] I am marking the cell at (2,1) to try to complete a vertical line.\"]",
+    "modelo": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "[\"['mark', '3', '1'] I marked the bottom-left cell to block your potential vertical win in the first column.\"]",
+    "modelo": "o3-mini",
+    "ganador": "o",
+    "tablero": [
+      [
+        "x",
+        "x",
+        "o"
+      ],
+      [
+        "x",
+        "o",
+        "b"
+      ],
+      [
+        "o",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 6,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "2",
+      "2"
+    ],
+    "razon": "['[\"mark\", \"2\", \"2\"] This is a good starting move in tic-tac-toe as it controls the center of the board.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "b",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 1,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "1"
+    ],
+    "razon": "['Okay, let\\'s continue the game. ```json [\"mark\", \"1\", \"1\"] ``` Reason: I\\'m playing as \\'o\\'. I need to make a move that doesn\\'t immediately give \\'x\\' a significant advantage. Placing my mark in the top-left corner is a reasonable opening move to start building a potential diagonal or row.']",
+    "modelo": "google/gemini-2.0-flash-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "b"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 2,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "1",
+      "3"
+    ],
+    "razon": "['```json [\"mark\", \"1\", \"3\"] ``` Reason: Player \\'o\\' has marked cell (1, 1). As player \\'x\\', placing a mark at (1, 3) is a good strategy as it starts building a potential horizontal line and a diagonal line while also preventing \\'o\\' from potentially building a horizontal line in the first row easily.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "b",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 3,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "o",
+    "movimiento": [
+      "mark",
+      "1",
+      "2"
+    ],
+    "razon": "['```json [\"mark\", \"1\", \"2\"] ``` Reason: I\\'m playing as \\'o\\'. Player \\'x\\' has pieces at (2, 2) and (1, 3). If I don\\'t play in (1, 2), then player \\'x\\' will win on their next turn by completing the row at the top. Therefore, I must play at (1, 2) to block them.']",
+    "modelo": "google/gemini-2.0-flash-exp:free",
+    "ganador": null,
+    "tablero": [
+      [
+        "o",
+        "o",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "b",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 4,
+    "evaluacion": {
+      "Comprensi\u00f3n de Reglas": 2,
+      "Validez y Legalidad": 2,
+      "Razonamiento Estrat\u00e9gico": 2,
+      "Factualidad": 2,
+      "Coherencia Explicativa": 2,
+      "Claridad Ling\u00fc\u00edstica": 3,
+      "Adaptabilidad": 2
+    }
+  },
+  {
+    "jugador": "x",
+    "movimiento": [
+      "mark",
+      "3",
+      "1"
+    ],
+    "razon": "['```json [\"mark\", \"3\", \"1\"] ``` Reason: Player \\'o\\' has blocked the first row. As player \\'x\\', I see that placing my mark at (3, 1) completes the diagonal from the top right to the bottom left, which leads to winning the game.']",
+    "modelo": "google/gemini-2.0-flash-thinking-exp:free",
+    "ganador": "x",
+    "tablero": [
+      [
+        "o",
+        "o",
+        "x"
+      ],
+      [
+        "b",
+        "x",
+        "b"
+      ],
+      [
+        "x",
+        "b",
+        "b"
+      ]
+    ],
+    "evaluada": false,
+    "match_id": 5,
     "evaluacion": {
       "Comprensi\u00f3n de Reglas": 2,
       "Validez y Legalidad": 2,

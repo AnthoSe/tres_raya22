@@ -4,21 +4,35 @@
   <meta charset="UTF-8" />
   <title>Historial de Evaluaciones - Tres en Raya IA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS desde CDN para diseño responsivo -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Hoja de estilos personalizada -->
   <link rel="stylesheet" href="/static/css/historial.css" />
+
+  <!-- Librería Chart.js para gráficos (Radar) -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
+  <!-- Botón para volver a la página de evaluación -->
   <button class="btn-back" onclick="window.location.href='/evaluar'">← Regresar</button>
 
   <div class="container">
+    <!-- Título principal -->
     <h1>Historial de Evaluaciones</h1>
 
+    <!-- Botón para mostrar u ocultar la rúbrica de evaluación -->
     <button class="btn btn-outline-secondary rubrica-toggle-btn" onclick="toggleRubrica()">Ver Rúbrica</button>
+
+    <!-- Botón para volver a evaluar -->
     <a href="/evaluar" class="btn btn-primary mb-3">Volver a evaluar</a>
 
+    <!-- Campo de texto para filtrar por jugador o modelo -->
     <input type="text" id="filtro" class="form-control mb-3" placeholder="Buscar por modelo o jugador..." />
 
+    <!-- Tabla responsiva que contiene el historial de evaluaciones -->
     <div class="table-responsive">
       <table class="table table-bordered align-middle table-striped" role="table" aria-label="Historial de evaluaciones">
         <thead class="table-dark text-center">
@@ -32,6 +46,7 @@
           </tr>
         </thead>
         <tbody>
+          <!-- Iteración sobre cada evaluación enviada por Flask -->
           {% for ev in evaluaciones %}
           <tr>
             <td>{{ ev.timestamp }}</td>
@@ -39,12 +54,14 @@
             <td>{{ ev.modelo }}</td>
             <td>{{ ev.movimiento_legible }}</td>
             <td class="text-center">
+              <!-- Etiqueta visual con color según tipo de evaluación -->
               <div style="display: flex; flex-direction: column; align-items: center;">
                 <span class="badge badge-eval
                     {% if ev.evaluacion == 'Buena' %}badge-Buena
                     {% elif ev.evaluacion == 'Mala' %}badge-Mala
                     {% elif ev.evaluacion == 'Creativa' %}badge-Creativa
-                    {% else %}badge-Pudo{% endif %}" title="{% if ev.evaluacion == 'Buena' %}Buena: movimiento estratégico y correcto
+                    {% else %}badge-Pudo{% endif %}" 
+                    title="{% if ev.evaluacion == 'Buena' %}Buena: movimiento estratégico y correcto
                           {% elif ev.evaluacion == 'Mala' %}Mala: movimiento erróneo o sin sentido
                           {% elif ev.evaluacion == 'Creativa' %}Creativa: movimiento original o inesperado
                           {% else %}Puede mejorar: movimiento válido pero con errores
@@ -54,8 +71,12 @@
               </div>
             </td>
             <td>
+              <!-- Contenedor de la explicación y tablero -->
               <div class="razon-tablero">
+                <!-- Texto con la razón de la evaluación -->
                 <pre>{{ ev.razon_texto or "Sin explicación" }}</pre>
+
+                <!-- Renderizado del tablero, ya sea string o lista -->
                 {% if ev.tablero is string %}
                 <pre>{{ ev.tablero }}</pre>
                 {% else %}
@@ -73,6 +94,7 @@
             </td>
           </tr>
           {% else %}
+          <!-- Mensaje por defecto si no hay evaluaciones -->
           <tr>
             <td colspan="6" class="text-center fst-italic">No hay evaluaciones aún.</td>
           </tr>
@@ -81,25 +103,26 @@
       </table>
     </div>
 
-    <!-- 🔽 Radar abajo del historial -->
+    <!-- Gráfico tipo radar con promedios por dimensión -->
     <div id="radarContainer" aria-label="Gráfico radar resumen de evaluaciones">
       <h2>Resumen Promedio por Dimensión</h2>
       <canvas id="graficoRadar" aria-label="Gráfico radar evaluaciones" role="img"></canvas>
     </div>
   </div>
 
-  <!-- Panel lateral de rúbrica -->
+  <!-- Panel lateral oculto que muestra la rúbrica de evaluación -->
   <div id="rubricaPanel" aria-hidden="true" role="region" aria-label="Rúbrica de evaluación">
     <h3>Rúbrica de Evaluación</h3>
     <div id="rubricaContent">
+      <!-- Rúbrica con 7 dimensiones evaluativas -->
       {% for r in [
-      ("Comprensión de Reglas", "Viola reglas básicas: casilla ocupada o fuera del tablero.", "Cumple reglas básicas, pero omite situaciones menos evidentes.", "Siempre movimientos legales, respeta todas las reglas del turno."),
-      ("Validez y Legalidad", "Movimiento inválido o ilegal.", "Movimiento válido sin análisis profundo.", "Válido y elegido tras un análisis completo."),
-      ("Razonamiento Estratégico", "Acción sin lógica.", "Intención simple (bloquear/avanzar), sin anticipación.", "Justificación clara, anticipa jugadas."),
-      ("Factualidad", "Incorrecta o no relacionada con tablero.", "Generalmente correcta con imprecisiones.", "Precisa y basada en hechos concretos."),
-      ("Coherencia Explicativa", "Confusa o contradictoria.", "Clara pero superficial.", "Lógica, completa y coherente."),
-      ("Claridad Lingüística", "Lenguaje poco claro.", "Claro con errores menores.", "Preciso, correcto y comprensible."),
-      ("Adaptabilidad", "Ignora cambios previos.", "Se adapta de forma básica o tardía.", "Rápida adaptación y ajuste efectivo.")
+        ("Comprensión de Reglas", "Viola reglas básicas: casilla ocupada o fuera del tablero.", "Cumple reglas básicas, pero omite situaciones menos evidentes.", "Siempre movimientos legales, respeta todas las reglas del turno."),
+        ("Validez y Legalidad", "Movimiento inválido o ilegal.", "Movimiento válido sin análisis profundo.", "Válido y elegido tras un análisis completo."),
+        ("Razonamiento Estratégico", "Acción sin lógica.", "Intención simple (bloquear/avanzar), sin anticipación.", "Justificación clara, anticipa jugadas."),
+        ("Factualidad", "Incorrecta o no relacionada con tablero.", "Generalmente correcta con imprecisiones.", "Precisa y basada en hechos concretos."),
+        ("Coherencia Explicativa", "Confusa o contradictoria.", "Clara pero superficial.", "Lógica, completa y coherente."),
+        ("Claridad Lingüística", "Lenguaje poco claro.", "Claro con errores menores.", "Preciso, correcto y comprensible."),
+        ("Adaptabilidad", "Ignora cambios previos.", "Se adapta de forma básica o tardía.", "Rápida adaptación y ajuste efectivo.")
       ] %}
       <div class="rubrica-entry">
         <h5>{{ r[0] }}</h5>
@@ -111,14 +134,16 @@
     </div>
   </div>
 
-  <!-- Variables desde Flask -->
+  <!-- Variables globales pasadas desde Flask para uso en JS -->
   <script>
-    window.dimensiones = {{ dimensiones | tojson }};
-    window.promedios = {{ promedios | tojson }};
+    window.dimensiones = {{ dimensiones | tojson }};  // Nombres de las dimensiones
+    window.promedios = {{ promedios | tojson }};      // Promedios por dimensión
   </script>
 
-  <!-- Scripts -->
+  <!-- Script principal de funcionalidades JS (gráfico, filtro, etc.) -->
   <script src="/static/js/historial.js"></script>
+
+  <!-- Script Bootstrap JS para funcionalidades interactivas -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
