@@ -20,6 +20,7 @@ from flask_sqlalchemy import SQLAlchemy
 # --- Inicialización de Flask y configuración de base de datos ---
 db = SQLAlchemy()
 app = Flask(__name__)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///evaluaciones.db'  # Base de datos SQLite local
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Desactiva el seguimiento de cambios para eficiencia
 db.init_app(app)
